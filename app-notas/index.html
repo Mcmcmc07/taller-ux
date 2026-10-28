@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Organiza tus tareas pendientes de forma sencilla."
+    />
+    <title>Mi lista de tareas</title>
+    <link rel="stylesheet" href="estilos.css" />
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <main class="contenedor">
+      <h1>Mi lista de tareas</h1>
+
+      <p class="descripcion">
+        Organiza tus actividades y lleva un control de tus pendientes.
+      </p>
+
+      <section aria-labelledby="titulo-resumen">
+        <h2 id="titulo-resumen">Resumen</h2>
+        <p id="resumen">Cargando tareas...</p>
+      </section>
+
+      <section aria-labelledby="titulo-formulario">
+        <h2 id="titulo-formulario">Agregar una tarea</h2>
+
+        <form id="formTarea">
+          <label for="nombreTarea">Nombre de la tarea</label>
+
+          <input
+            type="text"
+            id="nombreTarea"
+            name="nombreTarea"
+            placeholder="Ej. Estudiar JavaScript"
+            maxlength="120"
+            required
+          />
+
+          <button type="submit">Agregar tarea</button>
+        </form>
+      </section>
+
+      <p id="mensaje" role="status" aria-live="polite"></p>
+
+      <section aria-labelledby="titulo-lista">
+        <h2 id="titulo-lista">Mis tareas</h2>
+        <ul id="listaTareas"></ul>
+      </section>
+    </main>
+  </body>
+</html>
